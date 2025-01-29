@@ -1,9 +1,9 @@
 using UnityEngine;
 using TMPro;
 
-public class PlayerSpaceship : MonoBehaviour
+public class PlayerSpaceship1 : MonoBehaviour
 {
-    private string nick1;
+    private string nick2;
     public TMP_Text textMeshPro;
 
     Rigidbody spaceship;
@@ -24,7 +24,7 @@ public class PlayerSpaceship : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        textMeshPro.text = this.nick1;
+        textMeshPro.text = this.nick2;
         Cursor.lockState = CursorLockMode.Locked;
         spaceship = GetComponent<Rigidbody>();
     }
@@ -52,7 +52,7 @@ public class PlayerSpaceship : MonoBehaviour
 
     void OnEnable()
     {
-        this.nick1 = PlayerPrefs.GetString("nick1");
-        Debug.Log(this.nick1);
+        this.nick2 = PlayerPrefs.GetString("nick2");
+        Debug.Log(this.nick2);
     }
 }
